@@ -826,64 +826,7 @@ input {
 	}
 }
 
-/* 
-
-.team-card__text {
-	color: var(--dark-color);
-}
-
-.team-cards {
-	display: flex;
-	justify-content: space-between;
-	gap: 24px;
-}
-
-.team-card {
-	background-color: var(--white-color);
-	box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229, 0px 1px 6px 0px #2e2f4214;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-.team-card__content {
-	padding: 32px 16px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 8px;
-}
-
-.team-card__text {
-	text-align: center;
-}
-
-.team-card__socials {
-	display: flex;
-	justify-content: center;
-	gap: 24px;
-}
-
-.team-card__socials-item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: none;
-	background-color: var(--primary-brand-color);
-	color: var(--light-color);
-	transition: background-color var(--transition-duration) var(--transition-timing-function);
-}
-
-.team-card__socials-item:focus,
-.team-card__socials-item:hover {
-	background-color: var(--pressed-state-color);
-}
-
-.team-card__socials-item-icon {
-	fill: currentColor;
-}
+/* Customers Section */
 
 .customers-heading {
 	text-align: center;
@@ -891,9 +834,10 @@ input {
 }
 
 .customers-list {
-	display: flex;
+	display: grid;
+	grid-template-columns: 168px;
 	justify-content: center;
-	gap: 24px;
+	row-gap: 72px;
 }
 
 .customer-item {
@@ -916,6 +860,26 @@ input {
 	border-color: var(--pressed-state-color);
 }
 
+@media screen and (min-width: 428px) {
+	.customers-list {
+		grid-template-columns: repeat(2, 190px);
+		column-gap: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.customers-list {
+		grid-template-columns: repeat(3, 168px);
+		column-gap: 24px;
+	}
+}
+
+@media screen and (min-width: 1158px) {
+	.customers-list {
+		grid-template-columns: repeat(6, 168px);
+	}
+}
+/* 
 .backdrop {
 	position: fixed;
 	top: 0;
