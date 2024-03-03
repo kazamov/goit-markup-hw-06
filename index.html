@@ -34,40 +34,64 @@
 				<nav class="navigation">
 					<a class="logo" href="./index.html"><span class="logo__web">WEB</span>STUDIO</a>
 					<ul class="navigation-menu">
-						<li class="navigation-menu__item">
+						<li>
 							<a
-								class="navigation-menu__item-link navigation-menu__item-link--active"
+								class="body-medium link link--active navigation-menu__item-link"
 								href="./index.html"
 								>Studio</a
 							>
 						</li>
-						<li class="navigation-menu__item">
-							<a class="navigation-menu__item-link" href="./portfolio.html">Portfolio</a>
+						<li>
+							<a class="body-medium link navigation-menu__item-link" href="./portfolio.html"
+								>Portfolio</a
+							>
 						</li>
-						<li class="navigation-menu__item">
-							<a class="navigation-menu__item-link" href="#">Contacts</a>
+						<li>
+							<a class="body-medium link navigation-menu__item-link" href="#">Contacts</a>
 						</li>
 					</ul>
 				</nav>
 
-				<address>
+				<address class="address">
 					<ul class="address-list">
 						<li class="address-list__item">
-							<a class="body address-list__item-link" href="mailto:info@devstudio.com"
+							<a class="small-text link address-list__item-link" href="mailto:info@devstudio.com"
 								>info@devstudio.com</a
 							>
 						</li>
 						<li class="address-list__item">
-							<a class="body address-list__item-link" href="tel:+110001111111"
+							<a class="small-text link address-list__item-link" href="tel:+110001111111"
 								>+11 (000) 111-11-11</a
 							>
 						</li>
 					</ul>
 				</address>
+
+				<button
+					class="mobile-menu-toggle js-open-menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="22"
+						viewBox="0 0 32 22"
+						fill="none"
+					>
+						<path
+							d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861"
+							stroke="#2E2F42"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
 			</div>
 		</header>
 
-		<main>
+		<main style="display: none">
 			<section class="hero-section">
 				<div class="container hero-container">
 					<h1 class="heading-large hero-title">Effective Solutions for Your Business</h1>
@@ -400,7 +424,7 @@
 			</section>
 		</main>
 
-		<footer class="footer">
+		<footer style="display: none" class="footer">
 			<div class="container footer-container">
 				<div class="footer-container__section">
 					<a class="logo logo--light" href="./index.html"
@@ -467,7 +491,7 @@
 			</div>
 		</footer>
 
-		<div data-modal class="backdrop is-hidden">
+		<div style="display: none" data-modal class="backdrop is-hidden">
 			<div role="dialog" aria-modal="true" class="modal">
 				<button aria-label="Close modal button" data-modal-close class="modal-btn" type="button">
 					<svg class="modal-btn__icon" width="8" height="8">
@@ -542,6 +566,85 @@
 			</div>
 		</div>
 
+		<div class="mobile-menu-container js-menu-container" id="mobile-menu">
+			<button
+				aria-label="Close modal button"
+				data-modal-close
+				class="js-close-menu modal-btn"
+				type="button"
+			>
+				<svg class="modal-btn__icon" width="8" height="8">
+					<use href="./images/icons.svg#close"></use>
+				</svg>
+			</button>
+
+			<nav class="navigation">
+				<ul class="navigation-menu">
+					<li>
+						<a
+							class="heading-medium link link--active navigation-menu__item-link"
+							href="./index.html"
+							>Studio</a
+						>
+					</li>
+					<li>
+						<a class="heading-medium link navigation-menu__item-link" href="./portfolio.html"
+							>Portfolio</a
+						>
+					</li>
+					<li>
+						<a class="heading-medium link navigation-menu__item-link" href="#">Contacts</a>
+					</li>
+				</ul>
+			</nav>
+
+			<address class="address">
+				<a class="heading-medium link link--active phone-link" href="tel:+110001111111"
+					>+11 (000) 111-11-11</a
+				>
+				<a class="heading-small link email-link" href="mailto:info@devstudio.com"
+					>info@devstudio.com</a
+				>
+				<ul class="social-buttons">
+					<li>
+						<a href="#" target="_blank" class="social-button">
+							<svg class="social-button__icon" width="24" height="24">
+								<use href="./images/icons.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="social-button">
+							<svg class="social-button__icon" width="24" height="24">
+								<use href="./images/icons.svg#twitter"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="social-button">
+							<svg class="social-button__icon" width="24" height="24">
+								<use href="./images/icons.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="social-button">
+							<svg class="social-button__icon" width="24" height="24">
+								<use href="./images/icons.svg#linkedin"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</address>
+		</div>
+
 		<script type="text/javascript" src="js/modal.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
+		<script type="text/javascript" src="js/mobile-menu.js"></script>
 	</body>
 </html>
