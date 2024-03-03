@@ -742,28 +742,34 @@ input {
 	}
 }
 
+/* Portfolio Section */
+
+.portfolio-section {
+	display: none;
+}
+
+@media screen and (min-width: 1158px) {
+	.portfolio-section {
+		display: block;
+		padding-bottom: var(--common-section-padding);
+	}
+
+	.portfolio-list {
+		display: flex;
+		gap: 24px;
+	}
+
+	.portfolio-heading {
+		margin-bottom: 72px;
+		text-align: center;
+	}
+
+	.portfolio-heading {
+		color: var(--dark-color);
+	}
+}
+
 /* 
-
-.advantages-list {
-	display: flex;
-	justify-content: space-between;
-	gap: 24px;
-}
-
-.advantages-list__item {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-}
-
-.advantages-list__item-icon-container {
-	padding: 24px 100px;
-	background-color: var(--light-color);
-}
-
-.advantages-list__item-heading {
-	color: var(--dark-color);
-}
 
 .team-card__text {
 	color: var(--dark-color);
